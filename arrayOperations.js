@@ -45,5 +45,5 @@ console.log(mappedArr);
 arr.splice(0, 0);
 
 // using splice to replace the elements of our array
-arr.splice(1, 1, "grape");
+arr.splice(1, 1, "the Ironman");
 
