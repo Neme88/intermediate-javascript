@@ -72,3 +72,8 @@ let operation17 = string.endsWith("string"); // false
 
 console.log(operation17);
 
+// eighteenth operation console log checking if a word is included in our string using the match method
+let operation18 = string.match("string");
+console.log(operation18);
+
+
