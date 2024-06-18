@@ -8,7 +8,7 @@ document.addEventListener ("DOMContentLoaded", (event) => {
 // Function to add a new item to the list 
 addButton.addEventListener('click', (event) => {
     const newItem = document.createElement("li");
-    newItem.innerText = 'Item ${itemList.children.length + 1}';
+    newItem.textContent = `list ${itemList.children.length + 1}`;
     itemList.appendChild(newItem);
     updateRemoveButtonVisibility();
 });
