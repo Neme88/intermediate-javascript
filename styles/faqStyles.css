@@ -1,0 +1,14 @@
+.main-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 0.50px solid;
+    border-radius: 10px;
+}
+#faq-text {
+    text-align: center;
+}
+.question {
+    margin: 10px;
+}
+
