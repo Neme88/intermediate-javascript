@@ -1,5 +1,5 @@
 .main-container {
-    width: 50%;
+    width: 55%;
     margin: auto;
     padding: 20px;
     border: 0.50px solid;
@@ -10,5 +10,26 @@
 }
 .question {
     margin: 10px;
+}
+.question h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #eeebeb;
+    border-radius: 10px;
+}
+.question p {
+    display: none;
+    text-align: center;
+    background-color: #cebab7;
+    color: #181515;
+    font-size: 18px;
+    border-radius: 4px;
+
+}
+.question.active h3 {
+    background-color: #FFFF00;
+}
+.question.active p {
+    display: block;
 }
 
