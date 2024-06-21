@@ -4,9 +4,16 @@
     padding: 20px;
     border: 0.50px solid;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+     
 }
 #faq-text {
     text-align: center;
+    margin: 0;
 }
 .question {
     margin: 10px;
@@ -24,6 +31,8 @@
     color: #181515;
     font-size: 18px;
     border-radius: 4px;
+    margin: 2px;
+    border: 0.3px solid;
 
 }
 .question.active h3 {
@@ -31,5 +40,13 @@
 }
 .question.active p {
     display: block;
+}
+
+#form-text {
+    text-align: center;
+    margin: 0;
+}
+#textarea-div {
+    border: 1px;
 }
 
