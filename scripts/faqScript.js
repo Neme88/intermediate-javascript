@@ -33,6 +33,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
                
         }
+        // add the new faq to the page.gi
         function addNewFaq(message) {
             const existingFaq = document.querySelectorAll('.question');
             const newFaq = document.createElement('div');
