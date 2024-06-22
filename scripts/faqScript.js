@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function() {
         checkTextarea();
     });
 
-        
+        // check if the textarea is empty.
         function checkTextarea() {
             if (textarea.value.trim() === '') {
                 feedback.textContent = "Empty textarea.";
