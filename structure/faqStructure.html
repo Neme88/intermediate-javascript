@@ -11,10 +11,13 @@
     
     <div class="main-container">
         <h1 id="form-text">Form</h1>
-        <div id="textarea-div">
-            <textarea name="askQuestion" id="askQustion" rows="4" cols="24" placeholder="Enter your question"></textarea>
+    <form id="newFaq">
+        <label for="message" id="enterQuestion">Enter Question</label>
+        <textarea name="message" id="message" rows="4" cols="24" placeholder="Enter your question"></textarea>
+        <button id="newFaq-button" type="submit">Submit</button>
+    </form>
+    <div id="feedback" class="message"></div>
 
-        </div>
         <h1 id="faq-text">FAQ</h1>
         <div class="question">
             <h3 > How Do I Target an Element for Manipulation Using the elements Id.</h3>

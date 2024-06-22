@@ -19,7 +19,7 @@
     margin: 10px;
 }
 .question h3 {
-    margin: -4px;
+    margin: 1px;
     padding: 10px;
     background-color: #eeebeb;
     border-radius: 10px;
@@ -31,7 +31,7 @@
     color: #181515;
     font-size: 18px;
     border-radius: 4px;
-    margin: 2px;
+    margin: 5px;
     border: 0.3px solid;
 
 }
@@ -46,7 +46,24 @@
     text-align: center;
     margin: 0;
 }
-#textarea-div {
-    border: 1px;
+#message {
+    display: block;
+    margin-bottom: 5px;
 }
+#enterQuestion {
+    margin-left: 50px;
+}
+#newFaq-button {
+    margin-left:70px;
+    padding: 5px 10px;
+    background-color: #bea19c;
+    color: #131111;
+    font-size: 18px;
+    border-radius: 2px;
+    border: 0.3px solid;
+}
+#newFaq{
+
+}
+
 
