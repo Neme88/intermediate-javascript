@@ -22,6 +22,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
         // check if the textarea is empty.
         function checkTextarea() {
+            console.log('Checking textarea'); 
+            console.log(textarea.value); 
             if (textarea.value.trim() === '') {
                 feedback.textContent = "Empty textarea.";
                 feedback.className = "Message error";
@@ -35,10 +37,16 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         // add the new faq to the page.gi
         function addNewFaq(message) {
-            const existingFaq = document.querySelectorAll('.question');
+            const faqContainer = document.getElementById('questions');
             const newFaq = document.createElement('div');
-            newFaq.className = 'faq-item';
+            const h3 = document.createElement('h3');
+            const p = document.createElement('p');
+            newFaq.className = 'question';
             newFaq.textContent = message;
-            existingFaq.appendChild(newFaq);
+            h3.textContent = message;
+            p.textContent = message;
+            newFaq.appendChild(h3);
+            newFaq.appendChild(p);
+            faqContainer.appendChild(newFaq);
         }
     });
