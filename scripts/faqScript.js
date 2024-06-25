@@ -1,15 +1,18 @@
 const fraqQuestions = document.querySelectorAll('.question');
-fraqQuestions.forEach( function(element) {
-
-    element.addEventListener('click', function () {
-        fraqQuestions.forEach( function(removeActive) {
-            removeActive.classList.remove('active');
+const numQuestions = document.getElementById('questions').children;
+function toggleThroughQuestions(){
+    for(let num = 0; num < numQuestions.length; num++) {
+        numQuestions[num].addEventListener('click', function () {
+            /*fraqQuestions.forEach( function(removeActive) {
+                removeActive.classList.remove('active');
+            });*/
+    
+             numQuestions[num].classList.toggle('active');
         });
-
-        this.classList.toggle('active');
-    });
-
-});
+    }
+    
+};
+toggleThroughQuestions();
 window.addEventListener('DOMContentLoaded', function() {
     const newFaq = document.getElementById('newFaq');
     const textarea = document.getElementById('message');
@@ -44,12 +47,15 @@ window.addEventListener('DOMContentLoaded', function() {
             newFaq.className = 'question';
             //newFaq.textContent = message;
             h3.textContent = message;
-            p.textContent = "";
+            p.textContent = "Here I am.";
             newFaq.appendChild(h3);
             newFaq.appendChild(p);
             faqContainer.appendChild(newFaq);
-            newFaq.addEventListener('click', function () {
-                newFaq.classList.toggle('active');
-            });
+            /*newFaq.addEventListener('click', function () {
+                //newFaq.classList.toggle('active');
+            
+            })*/
+            toggleThroughQuestions()
+            console.log(fraqQuestions.length);
         }
     });
