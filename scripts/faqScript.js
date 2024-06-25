@@ -48,5 +48,8 @@ window.addEventListener('DOMContentLoaded', function() {
             newFaq.appendChild(h3);
             newFaq.appendChild(p);
             faqContainer.appendChild(newFaq);
+            newFaq.addEventListener('click', function () {
+                newFaq.classList.toggle('active');
+            });
         }
     });
