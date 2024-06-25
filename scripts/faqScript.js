@@ -42,9 +42,9 @@ window.addEventListener('DOMContentLoaded', function() {
             const h3 = document.createElement('h3');
             const p = document.createElement('p');
             newFaq.className = 'question';
-            newFaq.textContent = message;
+            //newFaq.textContent = message;
             h3.textContent = message;
-            p.textContent = message;
+            p.textContent = "";
             newFaq.appendChild(h3);
             newFaq.appendChild(p);
             faqContainer.appendChild(newFaq);
