@@ -1,18 +1,19 @@
-const fraqQuestions = document.querySelectorAll('.question');
 const numQuestions = document.getElementById('questions').children;
-function toggleThroughQuestions(){
-    for(let num = 0; num < numQuestions.length; num++) {
-        numQuestions[num].addEventListener('click', function () {
-            /*fraqQuestions.forEach( function(removeActive) {
-                removeActive.classList.remove('active');
-            });*/
+function toggleThroughQuestions(event){
+            const fraqQuestions = document.querySelectorAll('.question');
+            fraqQuestions.forEach( function(removeActive) {
+                if(removeActive !== event.currentTarget){
+                    removeActive.classList.remove('active');
+                }
+                
+            });
     
-             numQuestions[num].classList.toggle('active');
-        });
-    }
-    
+             event.currentTarget.classList.toggle('active');   
 };
-toggleThroughQuestions();
+const fraqQuestions = document.querySelectorAll('.question');
+fraqQuestions.forEach(function(question) {
+    question.addEventListener('click', toggleThroughQuestions);
+});
 window.addEventListener('DOMContentLoaded', function() {
     const newFaq = document.getElementById('newFaq');
     const textarea = document.getElementById('message');
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
     newFaq.addEventListener('submit', function (event) {
         event.preventDefault();
         checkTextarea();
+    
     });
 
         // check if the textarea is empty.
@@ -51,11 +53,5 @@ window.addEventListener('DOMContentLoaded', function() {
             newFaq.appendChild(h3);
             newFaq.appendChild(p);
             faqContainer.appendChild(newFaq);
-            /*newFaq.addEventListener('click', function () {
-                //newFaq.classList.toggle('active');
-            
-            })*/
-            toggleThroughQuestions()
-            console.log(fraqQuestions.length);
-        }
+            newFaq.addEventListener('click', toggleThroughQuestions);        }
     });
