@@ -1,3 +1,4 @@
+// function that adds or removes active state on each FAQ as we toggle through.
 const numQuestions = document.getElementById('questions').children;
 function toggleThroughQuestions(event){
             const fraqQuestions = document.querySelectorAll('.question');
@@ -14,6 +15,7 @@ const fraqQuestions = document.querySelectorAll('.question');
 fraqQuestions.forEach(function(question) {
     question.addEventListener('click', toggleThroughQuestions);
 });
+// function that listens for submit event and prevents events to happen by default.
 window.addEventListener('DOMContentLoaded', function() {
     const newFaq = document.getElementById('newFaq');
     const textarea = document.getElementById('message');
@@ -25,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
     
     });
 
-        // check if the textarea is empty.
+        // function the check if textarea is empty.
         function checkTextarea() {
             console.log('Checking textarea'); 
             console.log(textarea.value); 
@@ -40,7 +42,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
                
         }
-        // add the new faq to the page.gi
+        // function that adds new FAQ to the page.
         function addNewFaq(message) {
             const faqContainer = document.getElementById('questions');
             const newFaq = document.createElement('div');
