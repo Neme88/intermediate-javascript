@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adding Interactivity to Form and FAQ</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive FAQ Section</title>
     <link rel="stylesheet" href="../styles/faqStyles.css">
     <link rel="stylesheet" href="../styles/formStyles.css">
-  </head>
-  <body>
-    <div class="main-container">
+</head>
+<body>
 
-        <h1 id="form-text">Form</h1>
+    <div class="container">
+        <div class="form">
+            <form id="faq-form">
+                <h1>Add New FAQ</h1>
+                <input class="input" type="text" id="question" name="question" placeholder="Question" required>
+                <textarea class="input" name="answer" required></textarea>
+                <button type="submit">Add FAQ</button>
+            </form>
 
-        <form id="newFaq">
-            <label for="message" id="enterQuestion">Enter Question</label>
-            <textarea name="message" id="message" rows="4" cols="24" placeholder="Enter your question"></textarea>
-            <button id="newFaq-button" type="submit">Submit</button>
-        </form>
-        <div id="feedback" class="message"></div>
+            <form id="edit-faq-form">
+                <h1>Update FAQ</h1>
+                <input class="input" type="text" id="editQuestion" name="editQuestion" required>
+                <button type="submit">Update FAQ</button>
+            </form>
+        </div>
 
-            <h1 id="faq-text">FAQ</h1>
-        
-            <div id="questions">
-                <div class="question">
-                    <h3 > How Do I Target an Element for Manipulation Using the elements Id.</h3>
-                    <p>
-                        You can target an element for manipulation using the element's id.
-                        To do this, use the document.getElementById() method and pass in the id of the element you want to target.
-                    </p>
+        <div class="faq-container">
+            <h1>FAQ</h1>
+            <div id="faq-items">
+                <div class="heading">
+                    <div class="faq-item">
+                        <h3 class="faq-heading">What is JavaScript?</h3>
+                        <p>JavaScript is a versatile programming language used to add interactivity to web pages.</p>
+                    </div>
+                    <button class="edit">Edit</button>
                 </div>
-                <div class="question">
-                    <h3> What are the 10 most commonly used HTML selectors ?</h3>
-                        <p>Class selector</p>
-                        <p>ID selector</p>
-                        <p>Universal selector</p>
-                        <p>Tag selector</p>
-                        <p>Attribute Presence selector</p>
-                        <p>Attribute Value selector</p>
-                        <p>Root selector</p>
-                        <p>Nth-Child selector</p>
-                        <p>First-Child selector</p>
-                        <p>Grouping selector</p>
-                </div>
-                <div class="question">
-                    <h3>What is HTML Element Identifier </h3>
-                    <p>
-                        An HTML element identifier is a unique name given to an HTML element.
-                        It is used to identify an HTML element in a web page.
-                        and also used to identify element for manipulation using either CSS or JavaScript.
-                    </p>
-                </div>   
-                <div class="question">
-                    <h3> What is an HTML Element Selectors </h3>
-                    <p>
-                        An HTML element selector is used to select an HTML element in a web page.
-                        It is used to identify element for manipulation using either CSS or JavaScript.
-                    </p>
+
+                <div class="heading">
+                    <div class="faq-item">
+                        <h3 class="faq-heading">How do I include JavaScript in my web page?</h3>
+                        <p>You can include JavaScript in your web page by using the tag. </p>
+                    </div>
+                    <button class="edit">Edit</button>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
-    
 
-    <script src="../scripts/faqScript.js"></script>     
-  </body>
+    <script src="../scripts/faqScript.js">
+    </script>
+</body>
 </html>
