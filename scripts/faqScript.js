@@ -69,7 +69,7 @@ function appendFaq(question, answer) {
 
     faqItems.appendChild(newFaqItem);
 }
-
+/*
 function faqHtml(question, answer) {
     return `
     <div class="faq-item">
@@ -77,6 +77,7 @@ function faqHtml(question, answer) {
         <p>${answer}</p>
     </div>`
 }
+*/
 
 function toggleFaq(element) {
     document.querySelectorAll(".faq-item").forEach(function(item) {
@@ -86,10 +87,3 @@ function toggleFaq(element) {
     })
     element.currentTarget.classList.toggle('active');
 }
-
-const var1 = "dddd";
-const var2 = "jgmg";
-
-const string = `hhghghghghgh ${var1} ngnnvhffb ${var2}`
-
-// Event bubbling
