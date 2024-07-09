@@ -73,4 +73,13 @@ button {
 .heading button {
     width: 100px;
 }
-
+.faq-item {
+    display: flex;
+    width: 100%;
+}
+.faq-item h3 {
+    width: 90%;
+}
+.faq-item button {
+    width: 100px;
+}

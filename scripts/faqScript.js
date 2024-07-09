@@ -64,11 +64,48 @@ form.addEventListener('submit', function (e){
 function appendFaq(question, answer) {
     const newFaqItem = document.createElement('div');
     newFaqItem.classList.add('faq-item');
-    newFaqItem.innerHTML = `<h3>${question}</h3><p>${answer}</p>`;
+    newFaqItem.innerHTML = `<h3>${question}</h3><p>${answer}</p> <button>Edit</button> <button>Delete</button`;
     newFaqItem.addEventListener('click', toggleFaq);
 
     faqItems.appendChild(newFaqItem);
 }
+
+// Edit Faq item
+faqItems.addEventListener('click', function (e) {
+    if(e.target.tagName === 'BUTTON' && e.target.innerText === 'Edit') {
+        for(let x = 0; x < faqEditButton.length; x++) {
+            // Toggle click
+            faqItem[x].addEventListener('click', toggleFaq);
+        
+            // Edit click
+            faqEditButton[x].addEventListener('click', function (e) {
+                e.preventDefault()
+                document.getElementById('editQuestion').value = faqHeading[x].innerText
+        
+                // add the heading id to the form data-id for easy update
+                editForm.setAttribute('data-id', x);
+            })
+        }
+    }
+});
+
+// Delete Faq
+faqItems.addEventListener('click', deleteFaq);
+
+function deleteFaq(e) {
+    if(e.target.tagName === 'BUTTON' && e.target.innerText === 'Delete') {
+        const faqItem = e.target.parentElement;
+        faqItem.remove();
+
+        // remove from faqs array
+        faqs = faqs.filter(faq => faq.question!== faqItem.querySelector('h3').innerText)
+
+        // persist changes
+        localStorage.setItem("faqs", JSON.stringify(faqs))
+    }
+}
+
+
 /*
 function faqHtml(question, answer) {
     return `
