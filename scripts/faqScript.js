@@ -70,24 +70,24 @@ function appendFaq(question, answer) {
     faqItems.appendChild(newFaqItem);
 }
 
-// Edit Faq item
-faqItems.addEventListener('click', function (e) {
-    if(e.target.tagName === 'BUTTON' && e.target.innerText === 'Edit') {
-        for(let x = 0; x < faqEditButton.length; x++) {
-            // Toggle click
-            faqItem[x].addEventListener('click', toggleFaq);
-        
-            // Edit click
-            faqEditButton[x].addEventListener('click', function (e) {
-                e.preventDefault()
-                document.getElementById('editQuestion').value = faqHeading[x].innerText
-        
-                // add the heading id to the form data-id for easy update
-                editForm.setAttribute('data-id', x);
-            })
+const faqEditButtons = document.querySelectorAll('.edit-button');
+const faqHeadings = document.querySelectorAll('.faq-item h3');
+
+document.body.addEventListener('click', function (e) {
+  
+    if (e.target.tagName === 'BUTTON' && e.target.innerText === 'Edit') {
+        e.preventDefault();
+        const buttonIndex = Array.from(faqEditButtons).indexOf(e.target);
+
+        if (buttonIndex !== -1) {
+           
+            document.getElementById('editQuestion').value = faqHeadings[buttonIndex].innerText;
+
+            document.getElementById('editForm').setAttribute('data-id', buttonIndex);
         }
     }
 });
+
 
 // Delete Faq
 faqItems.addEventListener('click', deleteFaq);
