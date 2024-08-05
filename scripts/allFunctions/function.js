@@ -8,7 +8,11 @@ function checkIfEvenOrOdd(num){
     if(num % 2 === 0) {
         console.log(`${num} is an even number`)
     }else{
+<<<<<<< HEAD
      b   console.log(`${num} is an odd number`)
+=======
+        console.log(`${num} is an odd number`)
+>>>>>>> 640314cbd2c6ca4ab041676d30b66abc16fca5d5
     }
 };
 checkIfEvenOrOdd(userInput);
@@ -32,7 +36,8 @@ function findLargestNumber(array) {
 const numbers = [10, 5, 100, 19, 35, 99];
 const largestNumber = findLargestNumber(numbers);
 console.log(largestNumber); // Outputs is 100
-*/b
+ HEAD
+*/
 function addNumber(numA, numB) {
     sum = numA + numB;
     return sum;
