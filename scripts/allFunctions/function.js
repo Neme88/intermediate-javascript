@@ -8,12 +8,10 @@ function checkIfEvenOrOdd(num){
     if(num % 2 === 0) {
         console.log(`${num} is an even number`)
     }else{
-<<<<<<< HEAD
-     b   console.log(`${num} is an odd number`)
-=======
+
+      console.log(`${num} is an odd number`)
         console.log(`${num} is an odd number`)
->>>>>>> 640314cbd2c6ca4ab041676d30b66abc16fca5d5
-    }
+q }
 };
 checkIfEvenOrOdd(userInput);
 
