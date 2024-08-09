@@ -18,11 +18,3 @@ squareNumber = squareNumber(9);
 console.log(squareNumber)
 
 
-
-// Export the function for easy external access from other files 
-
-module.exports = {
-    printSomething,
-    squareNumber
-};
-
