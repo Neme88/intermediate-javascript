@@ -44,6 +44,26 @@ function multiplyNumbers(...nums) {
     return product;
 }
 
-multiplyNumbers = multiplyNumbers(2, 8, 4, 10);
+multiplyNumbers = multiplyNumbers(2, 8, 2, 13);
 console.log(multiplyNumbers)
+
+// compare numbers using the rest parameter function
+function compareRestnumsWithfirstNum(fistNum, ...restNums) {
+    let result = -1;
+    if (fistNum === 0 || restNums.length === 0) {
+        throw new Error ("Invalid empty entires");
+    }
+    for (let i = 0; i < restNums.length; i++) {
+        if (restNums[i] === fistNum) {
+            let result = restNums[i];
+            break;
+
+        }
+    
+    }
+    return result;
+}
+
+let compareRestnumsWithfirstNum = compareRestnumsWithfirstNum(4, 5,1, 2, 4, 3, 5);
+console.log(compareRestnumsWithfirstNum);
 
