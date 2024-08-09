@@ -1,2 +1,2 @@
 # Advance-javascript
-This repo is all about advance javascript concepts 
+This repo is all about intermediate javascript  it focuses on concepts like, Datatypes, functions,and DOM. 
