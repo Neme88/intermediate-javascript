@@ -4,13 +4,7 @@ const functionName = functionkeyword (params) {
      function body with return statement if applicable
 };
 */
-/*
- Syntax Example for named function expression
 
- const functionName = function namedFunction (params) {
-     function body with return statement if applicable
-};
-*/
 
 // Code example of Anonymous function expression
 
@@ -36,6 +30,14 @@ console.log(calculateArea(5)); // Output: 78.53981633974483
     }
 console.log(operation(4,5)); // Output:
 
+/*
+ Syntax Example for named function expression
+
+ const variableName = functionKeyword functionName (params) {
+     function body with return statement if applicable
+};
+*/
+
 
 // Code example of named function expression
 
@@ -47,3 +49,11 @@ const factorial = function fact (n) {
 }
 
 console.log(factorial(5)); // Output: 120
+
+// Another code example of named function expression
+
+const addnums = function add(a, b) {
+    return a + b;
+};
+
+console.log(addnums(4,5)); // Output: 9
