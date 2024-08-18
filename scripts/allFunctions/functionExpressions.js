@@ -35,3 +35,15 @@ console.log(calculateArea(5)); // Output: 78.53981633974483
         }
     }
 console.log(operation(4,5)); // Output:
+
+
+// Code example of named function expression
+
+const factorial = function fact (n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * fact(n-1);
+}
+
+console.log(factorial(5)); // Output: 120
