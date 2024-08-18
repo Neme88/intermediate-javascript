@@ -72,3 +72,14 @@ const greetUser = function greetUser(name = "Guest") {
 
 greetUser("John Doe"); // Output: Hello, John Doe!
 greetUser(); // Output: Hello, Guest!
+
+// Named function expression with a Rest parameter
+const multiplyNumbers = function multiplyNumbers(...nums) {
+    let product = 1;
+    for (let num of nums) {
+        product *= num;
+    }
+    return product;
+};
+output = multiplyNumbers( 2, 4, 8, 13)
+console.log(output)
