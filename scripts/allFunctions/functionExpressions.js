@@ -64,3 +64,11 @@ console.log(addnums(4,5)); // Output: 9
 };
 
 printHello(); // Output: Hello!
+
+// Named function expression with a default parameter
+const greetUser = function greetUser(name = "Guest") {
+    console.log("Hello, " + name + "!");
+};
+
+greetUser("John Doe"); // Output: Hello, John Doe!
+greetUser(); // Output: Hello, Guest!
