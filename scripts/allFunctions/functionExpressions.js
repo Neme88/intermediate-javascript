@@ -57,3 +57,10 @@ const addnums = function add(a, b) {
 };
 
 console.log(addnums(4,5)); // Output: 9
+
+// Named function expression with no parameters
+ const printHello = function printHello() {
+    console.log("Hello!");
+};
+
+printHello(); // Output: Hello!
