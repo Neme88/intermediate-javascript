@@ -38,4 +38,16 @@ console.log(operation(4, 5)); // Output:
 
 // example of anonymous function assigned to a variable
 
+const calculateSum = function (numbers) {
+
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+     sum += numbers[i];
+  }
+  return sum;
+}
+
+console.log(output1=calculateSum([3, 6, 3,9,2]))
+let output2 = calculateSum([3, 6, 3, 9])
+console.log(output2)
 
