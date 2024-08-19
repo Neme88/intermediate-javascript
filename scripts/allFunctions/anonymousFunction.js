@@ -13,7 +13,11 @@ const calculateArea = function (radius) {
 
 console.log(calculateArea(5)); // Output: 78.53981633974483
 
-// Another code example of anonymous function expression
+/* Another code example of anonymous function in this 
+instance it is used a callback function to perform the calculation
+if certain parameters condition is true or false
+*/
+
 let isAdd = true;
 let operation;
 if (isAdd) {
@@ -50,4 +54,14 @@ const calculateSum = function (numbers) {
 console.log(output1=calculateSum([3, 6, 3,9,2]))
 let output2 = calculateSum([3, 6, 3, 9])
 console.log(output2)
+
+// example of anonymous function as used to multiply numbers
+const multiplyNum = function(num) {
+  return num * num;
+}
+
+console.log(output3=multiplyNum(5))
+
+
+
 
