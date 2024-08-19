@@ -1,43 +1,10 @@
-/* Syntax Example of Anonymouse function expression 
 
-const functionName = functionkeyword (params) {
-     function body with return statement if applicable
-};
-*/
-
-
-// Code example of Anonymous function expression
-
-const calculateArea = function(radius) {
-    return Math.PI * radius * radius;
-};
-
-console.log(calculateArea(5)); // Output: 78.53981633974483
-
-
-// Another code example of anonymous function expression
-    let isAdd = true;
-    let operation;
-    if (isAdd) {
-        operation = function(a, b) {
-            return a + b;
-        }
-
-    }else{
-        operation = function(a, b) {
-            return a - b;
-        }
-    }
-console.log(operation(4,5)); // Output:
-
-/*
- Syntax Example for named function expression
+ /* Syntax Example for named function expression
 
  const variableName = functionKeyword functionName (params) {
      function body with return statement if applicable
 };
 */
-
 
 // Code example of named function expression
 
@@ -81,10 +48,10 @@ const multiplyNumbers = function multiplyNumbers(...nums) {
     }
     return product;
 };
-output0 = multiplyNumbers( 2, 4, 8, 13)
+const output0 = multiplyNumbers( 2, 4, 8, 13)
 console.log(output0)
 
-/* 
+/*
 using named function expression to multiply numbers by two using 
 Rest parameter and traditional loop
 */
@@ -99,4 +66,7 @@ const multiplyNumbersByTwo = function multiplyNumbersByTwo(baseNum,...numbers) {
 };
 const output1 = multiplyNumbersByTwo(2, 4, 5, 6)
 console.log(output1)
+
+
+ 
 
