@@ -81,5 +81,22 @@ const multiplyNumbers = function multiplyNumbers(...nums) {
     }
     return product;
 };
-output = multiplyNumbers( 2, 4, 8, 13)
-console.log(output)
+output0 = multiplyNumbers( 2, 4, 8, 13)
+console.log(output0)
+
+/* 
+using named function expression to multiply numbers by two using 
+Rest parameter and traditional loop
+*/
+
+const multiplyNumbersByTwo = function multiplyNumbersByTwo(baseNum,...numbers) {
+    sum = 0;
+    for (let num = 0; num < numbers.length; num++) {
+        sum = sum + (numbers[num] * baseNum);
+    };
+    return sum;
+
+};
+const output1 = multiplyNumbersByTwo(2, 4, 5, 6)
+console.log(output1)
+
